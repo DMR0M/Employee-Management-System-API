@@ -1,0 +1,19 @@
+package com.example.springboot.employees.service;
+
+import com.example.springboot.employees.entity.Employee;
+import com.example.springboot.employees.request.EmployeeRequest;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface EmployeeService {
+    List<Employee> findAll();
+
+    Employee findById(long id);
+
+    Employee save(EmployeeRequest employeeRequest);
+
+    Employee update(long id, EmployeeRequest employeeRequest);
+
+    void deleteById(long id);
+}
